@@ -91,7 +91,7 @@ class ClientListView(ListView):
         user = self.request.user
         if user.is_superuser:
             return Client.objects.all()
-        return Client.objects.filter(onwer=user)
+        return Client.objects.filter(owner=user)
 
 
 class ClientDetailView(DetailView):
